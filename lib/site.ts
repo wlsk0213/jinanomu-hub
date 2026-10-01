@@ -51,6 +51,12 @@ export const site = {
       lead: '외부 조사 위탁, 조사보고서, 고충심의, 예방교육',
       href: 'https://jeonseung.co.kr/services/workplace-harassment/',
     },
+    {
+      id: 'dismissal',
+      label: '부당해고·부당징계 구제신청',
+      lead: '노동위원회 구제신청(초심·재심), 해고·징계 절차 자문, 임금체불 등 노동사건',
+      href: 'https://jeonseung.co.kr/services/case-representation/',
+    },
   ],
 };
 
@@ -113,6 +119,7 @@ export const board: { label: string; items: BoardItem[] }[] = [
       { t: '근로감독 대응', href: 'https://jeonseung.co.kr/services/labor-inspection/' },
       { t: '직장 내 괴롭힘 조사', href: 'https://jeonseung.co.kr/services/workplace-harassment/' },
       { t: '산업안전·중대재해', href: 'https://jeonseung.co.kr/services/industrial-safety/' },
+      { t: '부당해고·부당징계 구제신청', href: 'https://jeonseung.co.kr/services/case-representation/' },
     ],
   },
   {
@@ -165,6 +172,13 @@ export const routes: Route[] = [
     desc: '외부 조사자 위탁, 조사 인터뷰와 보고서, 보호조치와 징계 심의까지 절차별로 맡습니다. 대표가 행위자로 신고된 경우도 포함합니다.',
     btn: '괴롭힘 조사 센터',
     href: 'https://jeonseung.co.kr/services/workplace-harassment/',
+  },
+  {
+    kicker: '노동위원회 사건 · 부당해고·부당징계 구제신청',
+    title: '부당해고·부당징계·부당전보를 당했거나, 구제신청을 받은 회사일 때',
+    desc: '근로자는 해고일부터 3개월 안에 노동위원회에 구제신청을 해야 하고, 회사는 답변서와 심문회의를 준비해야 합니다. 초심·재심, 화해, 금전보상 명령까지 노동위원회 사건을 대리합니다.',
+    btn: '부당해고·부당징계 구제신청',
+    href: 'https://jeonseung.co.kr/services/case-representation/',
   },
   {
     kicker: '근로감독',

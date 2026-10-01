@@ -38,7 +38,7 @@ const personJsonLd = {
     url: site.firm.url,
   },
   hasCredential: site.quals.map((q) => ({ '@type': 'EducationalOccupationalCredential', name: q })),
-  knowsAbout: ['산업안전', '중대재해처벌법', '산재보상', '직장 내 괴롭힘 조사', '근로감독 대응', '인사노무 자문'],
+  knowsAbout: ['산업안전', '중대재해처벌법', '산재보상', '직장 내 괴롭힘 조사', '부당해고 구제신청', '부당징계 구제신청', '노동위원회 사건 대리', '근로감독 대응', '인사노무 자문'],
   memberOf: [
     { '@type': 'Organization', name: '당진시 노사민정협의회' },
     { '@type': 'GovernmentOrganization', name: '충청남도 감사위원회 안심노무사' },
