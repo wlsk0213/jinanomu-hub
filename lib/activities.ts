@@ -17,7 +17,7 @@ export const activities: Activity[] = [
     kind: '위촉',
     title: '당진시 노사민정협의회 본협의회 위원',
     org: '당진시',
-    note: '임기 2026.9.29 ~ 2028.9.28',
+    note: '임기 2026.9.29 ~ 2028.9.28 · 당진신문 10-01 보도',
     url: 'https://jeonseung.co.kr/news/dangjin-labor-management-council-2026/',
   },
   {
