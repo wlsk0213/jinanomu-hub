@@ -94,6 +94,22 @@ export const activities: Activity[] = [
     url: 'https://jeonseung.co.kr/news/chungnam-ansim-nomusa-2025/',
   },
   {
+    date: '2023-10-26',
+    kind: '강의',
+    title: '공동주택관리 노무·회계 교육 — 인사노무(노동관계법령·근로기준법)',
+    org: '청주시',
+    note: '의무관리 공동주택 입주자대표회의·관리사무소장·회계담당자 150여 명, 고인쇄박물관',
+    url: 'http://www.hapt.co.kr/news/articleView.html?idxno=160437',
+  },
+  {
+    date: '2023-10-26',
+    kind: '강의',
+    title: '공동주택관리 노무·회계 교육 — 인사노무(노동관계법령·근로기준법)',
+    org: '청주시',
+    note: '의무관리 공동주택 입주자대표회의·관리사무소장·회계담당자 150여 명, 고인쇄박물관',
+    url: 'http://www.hapt.co.kr/news/articleView.html?idxno=160437',
+  },
+  {
     date: '2024-12',
     kind: '활동',
     title: '천안·아산 전문직 청년 모임 더함스터디 연탄 나눔 봉사',
