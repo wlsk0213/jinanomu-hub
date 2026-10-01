@@ -65,6 +65,29 @@ export default function AboutPage() {
               모든 글은 국가법령정보센터의 현행 법령과 고용노동부 매뉴얼 원문을 대조해 씁니다. 법률상 의무와 매뉴얼의 권고, 실무 제안을
               문장에서 구분하고, 판례는 사건번호와 원문 링크를 함께 적습니다. 상담에서 들은 질문 하나가 글 하나가 됩니다.
             </p>
+
+            <h2 id="profile-kit">프로필 자료</h2>
+            <p>강의·행사 안내문, 기사, 위촉 공문에 쓰실 사진과 약력입니다. 그대로 내려받아 쓰셔도 됩니다.</p>
+            <div className="kit">
+              <a href={site.photoReal} download="jeon-jina-profile.jpg">
+                <b>프로필 사진(실사)</b>
+                <span>JPG · 2000×1333</span>
+              </a>
+              <a href={site.photo} download="jeon-jina-illust.webp">
+                <b>프로필 일러스트</b>
+                <span>WEBP · 1125×1400</span>
+              </a>
+              <a href={`mailto:${site.email}?subject=프로필 자료 요청`}>
+                <b>원본·다른 크기 요청</b>
+                <span>{site.email}</span>
+              </a>
+            </div>
+            <div className="bio-box">
+              {`전지나 공인노무사 · 노무법인 전승 대표
+${site.intro}
+자격: ${site.quals.join(', ')}
+주요 위촉: 당진시 노사민정협의회 본협의회 위원, 충청남도 갑질 및 괴롭힘 예방 안심노무사, 충청남도의회 갑질 상담 조사관, 충청소방학교 소방공무원 고충심사위원회 민간위원, 한국가스기술공사 감사·고충심의위원, 코레일테크(주) 고충·징계심의위원`}
+            </div>
           </div>
         </div>
       </section>

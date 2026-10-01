@@ -5,7 +5,7 @@ export const site = {
   url: 'https://jinanomu.com',
   name: '전지나 노무사',
   title: '전지나 노무사 | 산업안전·산재보상·직장 내 괴롭힘 공인노무사',
-  tagline: '일터의 문제를 법과 기록으로 푸는 노무사', // 10-01 대표 확정 전 임시안
+  tagline: '일터의 문제를 법과 기록으로 푸는 노무사', // 2026-10-01 대표 확정
   // [C] 개인형 — 프로필·구조화 데이터 (원문 그대로)
   intro:
     '전지나 노무사는 산업안전·중대재해, 산재보상, 직장 내 괴롭힘 분야를 중심으로 활동하는 공인노무사로, 노무법인 전승의 대표이며 충청남도 갑질·괴롭힘 예방 안심노무사다.',
@@ -15,7 +15,9 @@ export const site = {
   // [D-개인]
   shortLine1: '노무법인 전승 대표 · 충남 갑질·괴롭힘 예방 안심노무사',
   shortLine2: '산업안전·중대재해 | 산재보상 | 직장 내 괴롭힘 조사',
-  photo: '/jeon-jina.jpg',
+  photo: '/jeon-jina-illust.webp', // 2026-10-01 대표 제공 일러스트
+  photoReal: '/jeon-jina.jpg', // 프로필 자료(내려받기)용 실사
+  email: 'jjn@hrjs.co.kr', // 2026-10-01 공개 결정
   tel: '041-417-1915',
   telHref: 'tel:041-417-1915',
   kakao: 'http://pf.kakao.com/_AxmxdJn',
@@ -74,6 +76,62 @@ export const channels: Channel[] = [
 ];
 
 export const sameAs = channels.map((c) => c.url);
+
+// 첫 화면 숫자 — 웍스 「공식문장 (확정본)」 "공개 가능한 실적 수치" 범위 안에서만. 텍스트 전용(구조화 데이터 금지).
+export const numbers = [
+  { n: '18', label: '위촉·위원' },
+  { n: '300+', label: '자문 기업' },
+  { n: '4,000+', label: '상담·사건' },
+];
+export const numbersNote = '기준: 2026년 9월';
+
+// 첫 화면 안내판 — 니즈별 출구. 업무 설명은 여기서 쓰지 않고 법인 홈으로 보낸다.
+export interface BoardItem {
+  t: string;
+  href: string;
+  primary?: boolean;
+}
+export const board: { label: string; items: BoardItem[] }[] = [
+  {
+    label: '상담하기',
+    items: [
+      { t: '전화 041-417-1915', href: 'tel:041-417-1915', primary: true },
+      { t: '카카오톡 채널', href: 'http://pf.kakao.com/_AxmxdJn' },
+      { t: '네이버 엑스퍼트', href: 'https://m.expert.naver.com/expert/profile/home?storeId=100000347' },
+      { t: '이메일', href: 'mailto:jjn@hrjs.co.kr' },
+      { t: '천안 사무소 지도', href: 'https://g.page/r/CXpdPSZ6A4y9EBM' },
+    ],
+  },
+  {
+    label: '법인·업무',
+    items: [
+      { t: '노무법인 전승 홈페이지', href: 'https://jeonseung.co.kr/', primary: true },
+      { t: '산재보상 안내', href: 'https://sanjae.jinanomu.com/' },
+      { t: '근로감독 대응', href: 'https://jeonseung.co.kr/services/labor-inspection/' },
+      { t: '직장 내 괴롭힘 조사', href: 'https://jeonseung.co.kr/services/workplace-harassment/' },
+      { t: '산업안전·중대재해', href: 'https://jeonseung.co.kr/services/industrial-safety/' },
+    ],
+  },
+  {
+    label: '글·채널',
+    items: [
+      { t: '전지나 노무사 블로그', href: 'https://blog.jinanomu.com/', primary: true },
+      { t: '네이버 블로그 · 소식', href: 'https://blog.naver.com/cplajjn' },
+      { t: '네이버 블로그 · 산재', href: 'https://blog.naver.com/jslaborlaw' },
+      { t: '네이버 블로그 · 인사노무', href: 'https://blog.naver.com/jshr1915' },
+      { t: '글 모아보기', href: '/writing/' },
+    ],
+  },
+  {
+    label: '활동·의뢰',
+    items: [
+      { t: '강의·출강 의뢰', href: '/lectures/', primary: true },
+      { t: '위촉·활동', href: '/activities/' },
+      { t: '언론 보도', href: '/press/' },
+      { t: '프로필 자료', href: '/about/#profile-kit' },
+    ],
+  },
+];
 
 export const nav = [
   { href: '/about/', label: '소개' },

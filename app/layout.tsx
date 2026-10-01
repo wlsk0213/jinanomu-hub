@@ -43,7 +43,8 @@ const personJsonLd = {
     { '@type': 'Organization', name: '당진시 노사민정협의회' },
     { '@type': 'GovernmentOrganization', name: '충청남도 감사위원회 안심노무사' },
   ],
-  telephone: `+82-${site.tel.replace(/^0/, '').replace(/-/g, '-')}`,
+  telephone: `+82-${site.tel.replace(/^0/, '')}`,
+  email: site.email,
   address: {
     '@type': 'PostalAddress',
     streetAddress: site.address.street,
@@ -69,12 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&display=swap"
-        />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="" />
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
@@ -111,7 +107,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <p className="foot-line">
                   {site.firm.name} 천안 본사 · {site.address.full}
                   <br />
-                  전화 {site.tel}
+                  전화 {site.tel} · 이메일 <a href={`mailto:${site.email}`}>{site.email}</a>
                 </p>
               </div>
               <div>

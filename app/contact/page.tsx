@@ -37,6 +37,16 @@ export default function ContactPage() {
             <small>{site.kakao}</small>
           </div>
           <div className="cbox">
+            <h2>이메일</h2>
+            <p className="big" style={{ fontSize: 22 }}>
+              {site.email}
+            </p>
+            <p>강의·출강, 위촉·심의, 언론 문의는 이메일로 주시면 자료를 함께 보내 드립니다.</p>
+            <a className="btn" href={`mailto:${site.email}`}>
+              메일 보내기
+            </a>
+          </div>
+          <div className="cbox">
             <h2>네이버 엑스퍼트</h2>
             <p>짧은 유료 상담을 원하시면 엑스퍼트에서 바로 예약할 수 있습니다.</p>
             <a className="btn" href={site.expert} target="_blank" rel="noopener">
