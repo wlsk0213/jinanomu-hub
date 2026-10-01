@@ -92,7 +92,10 @@ export default function Home() {
                 <span className="rkicker">{r.kicker}</span>
                 <h3>{r.title}</h3>
                 <p>{r.desc}</p>
-                <Btn t={r.btn} href={r.href} />
+                <div className="rbtns">
+                  <Btn t={r.btn} href={r.href} />
+                  {r.btn2 && r.href2 && <Btn t={r.btn2} href={r.href2} />}
+                </div>
               </article>
             ))}
           </div>

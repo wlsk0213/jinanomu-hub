@@ -150,6 +150,8 @@ export interface Route {
   desc: string;
   btn: string;
   href: string;
+  btn2?: string; // 두 번째 입장(근로자/사업주)용 버튼
+  href2?: string;
 }
 export const routes: Route[] = [
   {
@@ -175,10 +177,12 @@ export const routes: Route[] = [
   },
   {
     kicker: '노동위원회 사건 · 부당해고·부당징계 구제신청',
-    title: '부당해고·부당징계·부당전보를 당했거나, 구제신청을 받은 회사일 때',
-    desc: '근로자는 해고일부터 3개월 안에 노동위원회에 구제신청을 해야 하고, 회사는 답변서와 심문회의를 준비해야 합니다. 초심·재심, 화해, 금전보상 명령까지 노동위원회 사건을 대리합니다.',
-    btn: '부당해고·부당징계 구제신청',
-    href: 'https://jeonseung.co.kr/services/case-representation/',
+    title: '해고·징계·전보를 당한 근로자도, 구제신청을 받은 회사도',
+    desc: '[근로자] 해고된 날부터 3개월 안에 노동위원회에 구제신청을 해야 하고, 해고 사유와 절차를 다툴 기록을 먼저 모읍니다. [회사] 답변서와 심문회의를 준비하고 화해·금전보상 명령까지 염두에 둡니다. 초심·재심 모두 대리합니다.',
+    btn: '근로자 · 구제신청 절차 안내',
+    href: 'https://jeonseung.co.kr/insights/budanghaego-guje-sincheong-3gaewol/',
+    btn2: '회사 · 노동사건 센터',
+    href2: 'https://jeonseung.co.kr/services/case-representation/',
   },
   {
     kicker: '근로감독',
