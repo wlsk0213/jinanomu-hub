@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { site, numbers, numbersNote, board } from '@/lib/site';
+import { site, numbers, numbersNote, board, routes, channels } from '@/lib/site';
 import { recentWritings, channelLabel } from '@/lib/writing';
 import { activities } from '@/lib/activities';
 import { fmtDate } from '@/lib/site';
@@ -78,6 +78,27 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 어떤 도움이 필요하세요? — 니즈별 입구 */}
+      <section className="sec" id="route">
+        <div className="wrap">
+          <div className="sec-head center">
+            <span className="kicker">Route</span>
+            <h2>어떤 도움이 필요하세요?</h2>
+            <p>상담·업무·글·강의가 섞이지 않도록 상황별로 입구를 나눴습니다. 업무 상담은 노무법인 전승으로 이어집니다.</p>
+          </div>
+          <div className="routes">
+            {routes.map((r) => (
+              <article className="rcard" key={r.title}>
+                <span className="rkicker">{r.kicker}</span>
+                <h3>{r.title}</h3>
+                <p>{r.desc}</p>
+                <Btn t={r.btn} href={r.href} />
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="sec">
         <div className="wrap">
           <div className="sec-head">
@@ -134,6 +155,33 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* 공식 채널과 연결된 곳 */}
+      <section className="sec" id="connect">
+        <div className="wrap">
+          <div className="sec-head center">
+            <span className="kicker">Connect</span>
+            <h2>공식 채널과 연결된 곳</h2>
+            <p>글·소식·상담 창구를 한곳에서 확인하세요. 모두 전지나 노무사와 노무법인 전승이 직접 운영합니다.</p>
+          </div>
+          <ul className="clist">
+            {channels.map((c) => (
+              <li key={c.id}>
+                <a href={c.url} target="_blank" rel="noopener">
+                  <span className={`ctile ${c.kind}`}>{c.tile}</span>
+                  <span className="ctext">
+                    <b>{c.label}</b>
+                    <small>{c.desc}</small>
+                  </span>
+                  <span className="carrow" aria-hidden>
+                    ↗
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     </main>

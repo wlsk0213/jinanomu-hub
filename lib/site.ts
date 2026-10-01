@@ -61,18 +61,19 @@ export interface Channel {
   desc: string;
   url: string;
   kind: 'site' | 'blog' | 'naver' | 'contact' | 'profile';
+  tile: string; // 목록 타일에 쓰는 짧은 글자
 }
 
 export const channels: Channel[] = [
-  { id: 'firm', label: '노무법인 전승 홈페이지', desc: '업무 분야·구성원·인사이트', url: 'https://jeonseung.co.kr/', kind: 'site' },
-  { id: 'blog', label: '전지나 노무사 블로그', desc: '사업주·인사담당자를 위한 노동법 실무 글', url: 'https://blog.jinanomu.com/', kind: 'blog' },
-  { id: 'sanjae', label: '산재보상 안내 사이트', desc: '상병별·직종별 산재 인정기준과 청구 절차', url: 'https://sanjae.jinanomu.com/', kind: 'site' },
-  { id: 'naver-official', label: '네이버 블로그(법인 소식)', desc: '위촉·교육·활동 소식', url: 'https://blog.naver.com/cplajjn', kind: 'naver' },
-  { id: 'naver-sanjae', label: '네이버 블로그(산재)', desc: '산재보상 사례와 안내', url: 'https://blog.naver.com/jslaborlaw', kind: 'naver' },
-  { id: 'naver-hr', label: '네이버 블로그(인사노무)', desc: '인사·노무, 직장 내 괴롭힘', url: 'https://blog.naver.com/jshr1915', kind: 'naver' },
-  { id: 'expert', label: '네이버 엑스퍼트', desc: '유료 노동법 상담', url: 'https://m.expert.naver.com/expert/profile/home?storeId=100000347', kind: 'contact' },
-  { id: 'kakao', label: '카카오톡 채널', desc: '상담 문의', url: 'http://pf.kakao.com/_AxmxdJn', kind: 'contact' },
-  { id: 'gbp', label: '구글 비즈니스 프로필', desc: '천안 본사 위치·리뷰', url: 'https://g.page/r/CXpdPSZ6A4y9EBM', kind: 'profile' },
+  { id: 'firm', label: '노무법인 전승 홈페이지', desc: '업무 분야·구성원·인사이트', url: 'https://jeonseung.co.kr/', kind: 'site', tile: '전승' },
+  { id: 'blog', label: '전지나 노무사 블로그', desc: '사업주·인사담당자를 위한 노동법 실무 글 · 주 3회', url: 'https://blog.jinanomu.com/', kind: 'blog', tile: '글' },
+  { id: 'sanjae', label: '산재보상 안내 사이트', desc: '상병별·직종별 산재 인정기준과 청구 절차', url: 'https://sanjae.jinanomu.com/', kind: 'site', tile: '산재' },
+  { id: 'naver-official', label: '네이버 블로그(법인 소식)', desc: '위촉·교육·활동 소식', url: 'https://blog.naver.com/cplajjn', kind: 'naver', tile: 'N' },
+  { id: 'naver-sanjae', label: '네이버 블로그(산재)', desc: '산재보상 사례와 안내', url: 'https://blog.naver.com/jslaborlaw', kind: 'naver', tile: 'N' },
+  { id: 'naver-hr', label: '네이버 블로그(인사노무)', desc: '인사·노무, 직장 내 괴롭힘', url: 'https://blog.naver.com/jshr1915', kind: 'naver', tile: 'N' },
+  { id: 'expert', label: '네이버 엑스퍼트', desc: '유료 노동법 상담', url: 'https://m.expert.naver.com/expert/profile/home?storeId=100000347', kind: 'contact', tile: '엑스퍼트' },
+  { id: 'kakao', label: '카카오톡 채널', desc: '상담 문의', url: 'http://pf.kakao.com/_AxmxdJn', kind: 'contact', tile: '톡' },
+  { id: 'gbp', label: '구글 비즈니스 프로필', desc: '천안 본사 위치·리뷰', url: 'https://g.page/r/CXpdPSZ6A4y9EBM', kind: 'profile', tile: 'G' },
 ];
 
 export const sameAs = channels.map((c) => c.url);
@@ -130,6 +131,73 @@ export const board: { label: string; items: BoardItem[] }[] = [
       { t: '언론 보도', href: '/press/' },
       { t: '프로필 자료', href: '/about/#profile-kit' },
     ],
+  },
+];
+
+// 「어떤 도움이 필요하세요?」 — 니즈별 입구. 설명은 상황과 다음 행동만, 업무 소개는 연결된 곳에서.
+export interface Route {
+  kicker: string;
+  title: string;
+  desc: string;
+  btn: string;
+  href: string;
+}
+export const routes: Route[] = [
+  {
+    kicker: '급한 사건',
+    title: '노동청 신고·노동위원회·근로감독 통지를 받았을 때',
+    desc: '출석 일정과 제출 자료, 먼저 정리할 기록을 통화로 짚어 드립니다. 당일 연락이 어려우면 카카오톡으로 상황을 남겨 주세요.',
+    btn: '전화 041-417-1915',
+    href: 'tel:041-417-1915',
+  },
+  {
+    kicker: '산재보상',
+    title: '사고·질병 산재 신청과 불승인 뒤 90일',
+    desc: '소음성 난청·직업성 암·뇌심혈관 질환·유족급여. 상병별 인정기준과 준비 자료, 심사청구 기한을 안내 사이트에 정리했습니다.',
+    btn: '산재보상 안내',
+    href: 'https://sanjae.jinanomu.com/',
+  },
+  {
+    kicker: '직장 내 괴롭힘',
+    title: '신고가 들어왔는데 회사가 직접 조사하기 어려울 때',
+    desc: '외부 조사자 위탁, 조사 인터뷰와 보고서, 보호조치와 징계 심의까지 절차별로 맡습니다. 대표가 행위자로 신고된 경우도 포함합니다.',
+    btn: '괴롭힘 조사 센터',
+    href: 'https://jeonseung.co.kr/services/workplace-harassment/',
+  },
+  {
+    kicker: '근로감독',
+    title: '2026년 감독 확대, 우리 사업장은 무엇을 준비하나',
+    desc: '사전 점검 항목, 통지 뒤 10일 동안 할 일, 12월 시행 노동감독관 직무집행법까지. 업무 페이지와 글 시리즈로 이어집니다.',
+    btn: '근로감독 대응',
+    href: 'https://jeonseung.co.kr/services/labor-inspection/',
+  },
+  {
+    kicker: '산업안전·중대재해',
+    title: '위험성평가·안전보건관리체계·감독 대응',
+    desc: '서류만 갖춘 체계가 아니라 현장에서 돌아가는 점검 구조를 만듭니다. 산업안전보건공단 컨설팅 4년 연속 수행(A등급)한 방식입니다.',
+    btn: '산업안전 센터',
+    href: 'https://jeonseung.co.kr/services/industrial-safety/',
+  },
+  {
+    kicker: '사업주 실무',
+    title: '취업규칙·해고 절차·급여·평가제도 점검',
+    desc: '상담에서 들은 질문을 법령 원문과 대조해 쓴 글입니다. 사업주와 인사담당자가 바로 확인할 수 있게 한 글에 한 질문만 다룹니다.',
+    btn: '전지나 노무사 블로그',
+    href: 'https://blog.jinanomu.com/',
+  },
+  {
+    kicker: '강의·출강',
+    title: '예방교육·관리자 노동법·조사 실무 교육',
+    desc: '직장 내 괴롭힘·성희롱 예방교육, 중대재해처벌법, 신입 실무자 노동법. 대상과 시간에 맞춰 구성안과 견적을 보내 드립니다.',
+    btn: '주제와 의뢰 방법',
+    href: '/lectures/',
+  },
+  {
+    kicker: '위촉·심의',
+    title: '위원·조사관·컨설턴트 위촉과 심의 참여',
+    desc: '고충·징계·감사·인권경영·경영평가 위원과 갑질 상담 조사관으로 참여해 온 이력입니다. 위촉 공문과 프로필 자료는 이메일로 받습니다.',
+    btn: '활동 이력 · 이메일',
+    href: '/activities/',
   },
 ];
 

@@ -265,3 +265,36 @@ h1, h2, h3 { font-family: var(--serif); color: var(--ink); font-weight: 700; let
   .bgroup { grid-template-columns: 1fr; gap: 6px; }
   .kit { grid-template-columns: 1fr; }
 }
+
+/* Route — 어떤 도움이 필요하세요? */
+.sec-head.center { flex-direction: column; align-items: center; text-align: center; gap: 6px; margin-bottom: 28px; }
+.kicker { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass); font-weight: 700; }
+.sec-head.center h2 { font-size: 30px; }
+.sec-head.center p { max-width: 36em; }
+.routes { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.rcard { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 24px 24px 22px; display: flex; flex-direction: column; gap: 8px; }
+.rcard:hover { border-color: var(--moss); }
+.rkicker { font-size: 12.5px; font-weight: 700; color: var(--brass); letter-spacing: 0.02em; }
+.rcard h3 { font-size: 19px; line-height: 1.35; }
+.rcard p { font-size: 14.5px; color: var(--muted); flex: 1; }
+.rcard .bbtn { align-self: flex-start; margin-top: 8px; }
+
+/* Connect — 공식 채널 목록 */
+.clist { display: flex; flex-direction: column; gap: 10px; max-width: 760px; margin: 0 auto; }
+.clist a { display: grid; grid-template-columns: 52px 1fr 28px; gap: 16px; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; }
+.clist a:hover { border-color: var(--moss); }
+.ctile { width: 52px; height: 52px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; font-family: var(--serif); font-weight: 800; font-size: 15px; color: var(--paper); background: var(--ink); letter-spacing: -0.02em; }
+.ctile.naver { background: #03c75a; color: #fff; }
+.ctile.contact { background: var(--brass); color: #fff; font-size: 12px; }
+.ctile.profile { background: #4285f4; color: #fff; }
+.ctile.blog { background: var(--ink-2); }
+.ctext { display: flex; flex-direction: column; min-width: 0; }
+.ctext b { font-size: 15.5px; color: var(--ink); font-weight: 600; }
+.ctext small { font-size: 13px; color: var(--muted); }
+.carrow { color: var(--muted); font-size: 16px; text-align: center; }
+@media (max-width: 860px) {
+  .routes { grid-template-columns: 1fr; }
+  .sec-head.center h2 { font-size: 24px; }
+  .clist a { grid-template-columns: 44px 1fr 20px; gap: 12px; padding: 12px 14px; }
+  .ctile { width: 44px; height: 44px; font-size: 13px; }
+}
