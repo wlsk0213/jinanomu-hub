@@ -80,6 +80,7 @@ export const channels: Channel[] = [
   { id: 'expert', label: '네이버 엑스퍼트', desc: '유료 노동법 상담', url: 'https://m.expert.naver.com/expert/profile/home?storeId=100000347', kind: 'contact', tile: '엑스퍼트' },
   { id: 'kakao', label: '카카오톡 채널', desc: '상담 문의', url: 'http://pf.kakao.com/_AxmxdJn', kind: 'contact', tile: '톡' },
   { id: 'naver-people', label: '네이버 인물정보', desc: '공인노무사 전지나 프로필', url: 'https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bjky&pkid=1&os=18815819&qvt=0&query=%EA%B3%B5%EC%9D%B8%EB%85%B8%EB%AC%B4%EC%82%AC%EC%A0%84%EC%A7%80%EB%82%98%20%ED%94%84%EB%A1%9C%ED%95%84', kind: 'profile', tile: '인물' },
+  { id: 'linkedin', label: '링크드인', desc: '경력·보유기술', url: 'https://www.linkedin.com/in/%EC%A7%80%EB%82%98-%EC%A0%84-226639440/', kind: 'profile', tile: 'in' },
   { id: 'remember', label: '리멤버 프로필', desc: '경력·전문분야', url: 'https://connect.rememberapp.co.kr/profile/382233', kind: 'profile', tile: '리멤버' },
   { id: 'lawsee', label: '로시컴 전문가 프로필', desc: '노동법 전문가 디렉터리', url: 'https://www.lawsee.com/expert/cplajjn', kind: 'profile', tile: '로시' },
   { id: 'gbp', label: '구글 비즈니스 프로필', desc: '천안 본사 위치·리뷰', url: 'https://g.page/r/CXpdPSZ6A4y9EBM', kind: 'profile', tile: 'G' },
