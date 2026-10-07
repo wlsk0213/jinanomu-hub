@@ -1,5 +1,7 @@
 // 세 채널(법인 인사이트·개인 블로그·산재 사이트)의 글을 한 목록으로 모은다.
-// 새 글을 발행하면 맨 앞에 한 줄 추가한다(/publish 절차에 포함). 제목은 발행본 그대로.
+// 새 글은 빌드 때 scripts/sync-writing.mjs가 세 사이트에서 자동으로 가져온다(lib/writing-auto.json, 매일 자동 빌드).
+// 아래 manual 목록은 요약·분야를 손으로 다듬은 글이며, 같은 주소가 있으면 이쪽이 우선한다.
+import auto from './writing-auto.json';
 
 export type Channel = 'insight' | 'blog' | 'sanjae';
 export type Field = '산업안전' | '산재보상' | '직장 내 괴롭힘' | '인사·노무' | '해고·징계' | 'HR컨설팅' | '근로감독';
@@ -21,7 +23,7 @@ export const channelLabel: Record<Channel, string> = {
 
 export const fields: Field[] = ['산업안전', '산재보상', '직장 내 괴롭힘', '인사·노무', '해고·징계', 'HR컨설팅', '근로감독'];
 
-export const writings: Writing[] = [
+const manual: Writing[] = [
   {
     title: '소음성 난청 산재 인정기준 — 85데시벨·3년·40데시벨은 무엇을 뜻하나요?',
     url: 'https://sanjae.jinanomu.com/posts/noise-hearing-loss-disability-benefit/',
@@ -183,5 +185,11 @@ export const writings: Writing[] = [
     summary: '불승인 사유별 대응 방향, 심사청구·재심사청구·취소소송의 선택지와 기한.',
   },
 ];
+
+const manualUrls = new Set(manual.map((w) => w.url));
+
+export const writings: Writing[] = [...manual, ...(auto as Writing[]).filter((w) => !manualUrls.has(w.url))].sort((a, b) =>
+  a.date < b.date ? 1 : a.date > b.date ? -1 : 0,
+);
 
 export const recentWritings = (n = 6) => writings.slice(0, n);
