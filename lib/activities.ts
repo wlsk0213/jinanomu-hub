@@ -72,6 +72,14 @@ export const activities: Activity[] = [
     url: 'http://www.hongnobok.or.kr/hongnobok/bbs/board.php?bo_table=bo_02&wr_id=5549',
   },
   {
+    date: '2026-01',
+    kind: '위촉',
+    title: '중소벤처기업부 비즈니스지원단 상담위원(재위촉)',
+    org: '충북지방중소벤처기업청',
+    note: '위촉기간 2026. 1. 1.~12. 31. · 2024년(2024. 4. 1.~12. 31.)에 이어 재위촉 · 인사·노무 분야',
+    url: 'https://jeonseung.co.kr/news/mss-business-support-counselor-2026/',
+  },
+  {
     date: '2025-12-04',
     kind: '활동',
     title: '충남 청년 창업·창직 성과공유회 무료 상담관 운영',
