@@ -64,6 +64,14 @@ export const activities: Activity[] = [
     url: 'https://jeonseung.co.kr/news/chungnam-social-service-management-consultant-2026/',
   },
   {
+    date: '2026-02-28',
+    kind: '위촉',
+    title: '산림청 기타공공기관 경영평가위원회 위원',
+    org: '산림청',
+    note: '위촉기간 2026. 2. 1.~2028. 1. 31. · 산림청장 위촉(2026. 2. 28.)',
+    url: 'https://jeonseung.co.kr/news/forest-service-public-institution-evaluation-2026/',
+  },
+  {
     date: '2026-02-26',
     kind: '강의',
     title: '노인맞춤돌봄서비스 신입전담사회복지사 역량강화교육 — 인사노무',
