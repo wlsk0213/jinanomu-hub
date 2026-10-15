@@ -64,6 +64,14 @@ export const activities: Activity[] = [
     url: 'https://jeonseung.co.kr/news/chungnam-social-service-management-consultant-2026/',
   },
   {
+    date: '2026-03-23',
+    kind: '위촉',
+    title: '코레일테크(주) 징계위원회 외부 전문위원',
+    org: '코레일테크(주)',
+    note: '위촉기간 2026. 3. 23.~2028. 3. 22. · 코레일테크(주) 대표이사 위촉',
+    url: 'https://jeonseung.co.kr/news/korailtech-disciplinary-committee-2026/',
+  },
+  {
     date: '2026-02-28',
     kind: '위촉',
     title: '산림청 기타공공기관 경영평가위원회 위원',
