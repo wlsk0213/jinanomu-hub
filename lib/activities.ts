@@ -9,9 +9,20 @@ export interface Activity {
   org?: string;
   note?: string;
   url?: string; // 법인 소식·보도 원문
+  urlLabel?: string; // 링크 글자(기본 '원문')
 }
 
 export const activities: Activity[] = [
+  {
+    // 교육 이수 — 맞는 분류가 없어 가장 가까운 '활동' 사용(대표 지시 10-23). 위촉·위원 18 집계와 무관. 수료번호는 쓰지 않음
+    date: '2026-10-20',
+    kind: '활동',
+    title: '제4기 직장 내 괴롭힘 조사실무과정(법률전문가) 수료',
+    org: '한국고용노동교육원',
+    note: '교육 이수 · 2026. 10. 19.~10. 20. · 15시간 집합교육',
+    url: '/certificates/harassment-investigation-course-2026.png', // 수료번호 가린 이미지(대표 허락 10-23)
+    urlLabel: '수료증',
+  },
   {
     date: '2026-09-29',
     kind: '위촉',

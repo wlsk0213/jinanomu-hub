@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { site } from '@/lib/site';
+import { site, trainingCredentials } from '@/lib/site';
 import { currentRoles, pastRoles } from '@/lib/activities';
 
 export const metadata: Metadata = {
@@ -60,6 +60,15 @@ export default function AboutPage() {
               ))}
             </ul>
 
+            <h2>교육 이수</h2>
+            <ul className="roles">
+              {trainingCredentials.map((c) => (
+                <li key={c.name}>
+                  {c.recognizedBy.name} {c.name}({c.dateCreated.slice(0, 4)})
+                </li>
+              ))}
+            </ul>
+
             <h2>글을 쓰는 방식</h2>
             <p>
               모든 글은 국가법령정보센터의 현행 법령과 고용노동부 매뉴얼 원문을 대조해 씁니다. 법률상 의무와 매뉴얼의 권고, 실무 제안을
@@ -83,10 +92,12 @@ export default function AboutPage() {
               </a>
             </div>
             <div className="bio-box">
-              {`전지나 공인노무사 · 노무법인 전승 대표
-${site.intro}
-자격: ${site.quals.join(', ')}
-주요 위촉: 당진시 노사민정협의회 본협의회 위원, 충청남도 갑질 및 괴롭힘 예방 안심노무사, 충청남도의회 갑질 상담 조사관, 충청소방학교 소방공무원 고충심사위원회 민간위원, 한국가스기술공사 감사·고충심의위원, 코레일테크(주) 고충·징계심의위원`}
+              {`전지나 공인노무사
+· 노무법인 전승 대표
+· 분야: 산업안전·중대재해 | 산재보상 | 직장 내 괴롭힘 조사
+· 자격: ${site.quals.join(', ')}
+· 주요 위촉: 당진시 노사민정협의회 본협의회 위원, 충청남도 갑질 및 괴롭힘 예방 안심노무사, 충청남도의회 갑질 상담 조사관, 충청소방학교 소방공무원 고충심사위원회 민간위원, 한국가스기술공사 감사·고충심의위원, 코레일테크(주) 고충·징계심의위원
+· 교육 이수: ${trainingCredentials.map((c) => `${c.recognizedBy.name} ${c.name.replace(/ 수료$/, '')} 수료(${c.dateCreated.slice(0, 4)})`).join(', ')}`}
             </div>
           </div>
         </div>

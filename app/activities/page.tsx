@@ -30,7 +30,7 @@ export default function ActivitiesPage() {
                   <b>{a.title}</b>
                   {a.url && (
                     <a className="src" href={a.url} target="_blank" rel="noopener">
-                      원문
+                      {a.urlLabel ?? '원문'}
                     </a>
                   )}
                   <span>

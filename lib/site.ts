@@ -60,6 +60,19 @@ export const site = {
   ],
 };
 
+// 이수 교육 — Person.hasCredential 에서 quals 뒤에 붙인다(화면 표시는 /activities/ 연혁).
+// 법인 홈 lib/person.ts · 산재 lib/person.ts 의 PERSON_CREDENTIALS 와 같은 내용을 유지한다(quals + 이 목록).
+// 수료번호는 넣지 않는다(대표 지시 2026-10-23). 수료증 이미지는 번호를 가려 /certificates/ 에 둔다(대표 허락 10-23).
+export const trainingCredentials = [
+  {
+    '@type': 'EducationalOccupationalCredential',
+    name: '제4기 직장 내 괴롭힘 조사실무과정(법률전문가) 수료',
+    credentialCategory: 'certificate',
+    recognizedBy: { '@type': 'Organization', name: '한국고용노동교육원' },
+    dateCreated: '2026-10-20',
+  },
+];
+
 // 외부 채널 — Person.sameAs 와 연락 페이지에 함께 쓴다.
 export interface Channel {
   id: string;
