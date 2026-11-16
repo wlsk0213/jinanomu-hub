@@ -14,6 +14,14 @@ export interface Activity {
 
 export const activities: Activity[] = [
   {
+    date: '2026-11-09',
+    kind: '위촉',
+    title: '2026년 고용차별예방 방문교육 전문강사',
+    org: '노사발전재단 충청지사 대전차별개선센터',
+    note: '위촉기간 2026. 11. 9.~2027. 11. 15. · 고용차별예방 전문강사 양성교육 수료 후 위촉 · 대전·세종·충남 사업장 방문교육(고용차별예방 필수과정 + 괴롭힘·성희롱·성차별 예방 선택과정)',
+    url: 'https://jeonseung.co.kr/news/nosa-employment-discrimination-prevention-instructor-2026/',
+  },
+  {
     // 교육 이수 — 맞는 분류가 없어 가장 가까운 '활동' 사용(대표 지시 10-23). 위촉·위원 18 집계와 무관. 수료번호는 쓰지 않음
     date: '2026-10-20',
     kind: '활동',
@@ -154,6 +162,7 @@ export const activities: Activity[] = [
 
 // 현재 맡고 있는 위촉·위원 (법인 홈페이지 구성원 페이지와 동일)
 export const currentRoles: string[] = [
+  '노사발전재단 고용차별예방 방문교육 전문강사',
   '당진시 노사민정협의회 본협의회 위원',
   '충청남도 갑질 및 괴롭힘 예방 안심노무사',
   '충청남도 충청소방학교 소방공무원 고충심사위원회 민간위원',
