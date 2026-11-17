@@ -14,6 +14,14 @@ export interface Activity {
 
 export const activities: Activity[] = [
   {
+    date: '2026-11-11',
+    kind: '활동',
+    title: '업무 협력 협약 체결(노무법인 전승)',
+    org: '순천향대학교 창업지원단',
+    note: '협약기간 2년 · 초기창업기업 근로계약·취업규칙 정비, 인사노무 리스크 진단, 고용지원 제도 연계 자문, 노무 자문, 교육·1:1 노무 멘토링',
+    url: 'https://jeonseung.co.kr/news/soonchunhyang-startup-package-mou-2026/',
+  },
+  {
     date: '2026-11-09',
     kind: '위촉',
     title: '2026년 고용차별예방 방문교육 전문강사',
