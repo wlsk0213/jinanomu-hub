@@ -158,6 +158,14 @@ export const activities: Activity[] = [
     title: '천안·아산 전문직 청년 모임 더함스터디 연탄 나눔 봉사',
     url: 'https://m.asantoday.com/120875',
   },
+  {
+    date: '2022-07',
+    kind: '위촉',
+    title: '인권경영위원회 외부위원(2024 연임 · 2026 재위촉)',
+    org: '국가수리과학연구소',
+    note: '1기 2022. 7. 1.~2024. 6. 30. · 연임 2024. 7. 1.~2026. 6. 30. · 2026년 재위촉, 현재 활동 · 노무 분야 외부위원',
+    url: 'https://jeonseung.co.kr/news/nims-human-rights-management-committee/',
+  },
 ];
 
 // 현재 맡고 있는 위촉·위원 (법인 홈페이지 구성원 페이지와 동일)
