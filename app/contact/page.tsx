@@ -29,6 +29,13 @@ export default function ContactPage() {
             </a>
           </div>
           <div className="cbox">
+            <h2>기업 상담 도우미</h2>
+            <p>급여대행·노무자문, 직장 내 괴롭힘 외부조사, 근로감독 대응 등 몇 가지 항목을 고르면 예상 비용이나 상담 범위를 먼저 확인할 수 있습니다.</p>
+            <a className="btn primary" href="https://jeonseung.co.kr/consultation/">
+              비용 알아보기
+            </a>
+          </div>
+          <div className="cbox">
             <h2>카카오톡 채널</h2>
             <p>사진·문서를 함께 보내야 하는 문의에 편합니다.</p>
             <a className="btn" href={site.kakao} target="_blank" rel="noopener">
