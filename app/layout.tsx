@@ -134,7 +134,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </ul>
               </div>
             </div>
-            <p className="foot-copy">© 2026 전지나. 이 사이트의 글은 일반적인 정보 제공을 목적으로 하며 개별 사안의 법률 자문을 대신하지 않습니다.</p>
+            <p className="foot-copy">© 2026 전지나. 이 사이트의 글은 일반적인 정보 제공을 목적으로 하며 개별 사안의 법률 자문을 대신하지 않습니다. <a href="https://jeonseung.co.kr/privacy/">개인정보 처리방침</a></p>
           </div>
         </footer>
       </body>
