@@ -47,7 +47,7 @@ export default function LecturesPage() {
           <div className="steps">
             <div className="step">
               <b>1. 문의</b>
-              전화({site.tel}) 또는 카카오톡 채널로 기관명, 교육 대상과 인원, 희망 일정·시간, 장소(또는 온라인), 주제를 알려 주세요.
+              아래 「온라인으로 강의 의뢰하기」에서 주제·대상·인원·시간을 고르시거나, 전화({site.tel})·카카오톡 채널로 알려 주세요.
             </div>
             <div className="step">
               <b>2. 구성안</b>
@@ -59,7 +59,10 @@ export default function LecturesPage() {
             </div>
           </div>
           <div className="card-actions" style={{ marginTop: 18 }}>
-            <a className="btn primary" href={site.telHref}>
+            <a className="btn primary" href="https://jeonseung.co.kr/consultation/?topic=lecture">
+              온라인으로 강의 의뢰하기
+            </a>
+            <a className="btn" href={site.telHref}>
               전화 {site.tel}
             </a>
             <a className="btn" href={site.kakao} target="_blank" rel="noopener">
