@@ -74,6 +74,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ko">
       <head>
         <meta name="naver-site-verification" content="c145d7fcaab8cb9a3565c34aa9cb0344ee6ae82d" />
+        {/* Google 애널리틱스(GA4) — 4개 사이트 공통 측정 ID, 11-20 */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7S3EJTKJGR" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7S3EJTKJGR');",
+          }}
+        />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="" />
         <link
           rel="stylesheet"
